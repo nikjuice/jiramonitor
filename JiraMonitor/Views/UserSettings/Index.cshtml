@@ -1,0 +1,92 @@
+@model JiraMonitor.Model.UserSettingsViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<form asp-action="Index">
+    <div class="form-horizontal">
+        <h4>Email notification settings</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="emailNotificationSettings.ID" />
+        <input type="hidden" asp-for="emailNotificationSettings.ApplicationUserId" />
+        <div class="form-group">
+            <label asp-for="emailNotificationSettings.Email" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="emailNotificationSettings.Email" class="form-control" />
+                <span asp-validation-for="emailNotificationSettings.Email" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="emailNotificationSettings.SmtpServer" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="emailNotificationSettings.SmtpServer" class="form-control" />
+                <span asp-validation-for="emailNotificationSettings.SmtpServer" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="emailNotificationSettings.SmtpPort" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="emailNotificationSettings.SmtpPort" class="form-control" />
+                <span asp-validation-for="emailNotificationSettings.SmtpPort" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="emailNotificationSettings.Password" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="emailNotificationSettings.Password" class="form-control"/>
+                <span asp-validation-for="emailNotificationSettings.Password" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="emailNotificationSettings.EmailTo" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="emailNotificationSettings.EmailTo" class="form-control" />
+                <span asp-validation-for="emailNotificationSettings.EmailTo" class="text-danger"></span>
+            </div>
+        </div>
+
+        <h4>Jira notification settings</h4>
+        <hr />
+
+        <input type="hidden" asp-for="jiraSettings.ID" />
+        <input type="hidden" asp-for="jiraSettings.ApplicationUserId" />
+
+        <div class="form-group">
+            <label asp-for="jiraSettings.Url" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="jiraSettings.Url" class="form-control" />
+                <span asp-validation-for="jiraSettings.Url" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="jiraSettings.User" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="jiraSettings.User" class="form-control" />
+                <span asp-validation-for="jiraSettings.User" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="jiraSettings.Password" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="jiraSettings.Password" class="form-control"/>
+                <span asp-validation-for="jiraSettings.Password" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

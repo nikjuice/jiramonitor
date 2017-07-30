@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.15
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JiraMonitor.Web", "JiraMonitor\JiraMonitor.Web.csproj", "{5CDA3C80-9D67-4D67-AB1A-D5014B732F8C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JiraMonitor.Service", "JiraMonitor.Service\JiraMonitor.Service.csproj", "{F5047334-0BFD-4713-940D-F5EACC6A4057}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JiraMonitor.Data", "JiraMonitor.Data\JiraMonitor.Data.csproj", "{1B36484C-8B84-4DEE-A650-3BA7D2A1A68E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5CDA3C80-9D67-4D67-AB1A-D5014B732F8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CDA3C80-9D67-4D67-AB1A-D5014B732F8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CDA3C80-9D67-4D67-AB1A-D5014B732F8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CDA3C80-9D67-4D67-AB1A-D5014B732F8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5047334-0BFD-4713-940D-F5EACC6A4057}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5047334-0BFD-4713-940D-F5EACC6A4057}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5047334-0BFD-4713-940D-F5EACC6A4057}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5047334-0BFD-4713-940D-F5EACC6A4057}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B36484C-8B84-4DEE-A650-3BA7D2A1A68E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B36484C-8B84-4DEE-A650-3BA7D2A1A68E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B36484C-8B84-4DEE-A650-3BA7D2A1A68E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B36484C-8B84-4DEE-A650-3BA7D2A1A68E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
