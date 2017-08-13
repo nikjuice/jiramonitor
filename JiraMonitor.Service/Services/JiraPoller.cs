@@ -53,7 +53,7 @@ namespace JiraMonitor.Service.Services
             {
                 _logger.LogInformation("Service started.");
 
-                List<Task> tasks = new List<Task>();
+               var tasks = new List<Task>();
 
                 foreach (var userData in _usersdata)
                 {
@@ -78,7 +78,7 @@ namespace JiraMonitor.Service.Services
                     }
                 }
 
-                Task.WaitAll();
+                Task.WaitAll(tasks.ToArray());
             }
                      
         }
