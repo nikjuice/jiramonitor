@@ -15,6 +15,7 @@ using JiraMonitor.Models;
 using JiraMonitor.Service.Services;
 using JiraMonitor.Data.DbModel;
 using JiraMonitor.Web.Models;
+using Microsoft.Extensions.Logging.AzureAppServices;
 
 namespace JiraMonitor
 {
@@ -76,6 +77,12 @@ namespace JiraMonitor
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
+            loggerFactory.AddAzureWebAppDiagnostics(
+                new AzureAppServicesDiagnosticsSettings
+                {
+                    OutputTemplate = "{Timestamp:yyyy-MM-dd HH:mm:ss zzz} [{Level}] {RequestId}-{SourceContext}: {Message}{NewLine}{Exception}"
+                }
+            );
 
             if (env.IsDevelopment())
             {
@@ -85,7 +92,7 @@ namespace JiraMonitor
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+                //TODO add normal error page here
             }
 
             app.UseStaticFiles();
